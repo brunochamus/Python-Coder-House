@@ -5,7 +5,6 @@ db = {
 }
 
 def register_user():
-    global db
     while True:
         username_input = input('Ingrese su nombre de usuario: ')
         if username_input in db:
@@ -30,25 +29,3 @@ def login_user():
             break
         else:
             print('Nombre de usuario o contraseña incorrectos')
-
-def main():
-    while True:
-        print('1 - Registro de usuario')
-        print('2 - Inicio de sesíon')
-        print('3 - Leer usuarios registrados')
-        print('4 - Salir')
-        option = input('Selecione una opcion: ')
-
-        if option == '1':
-            register_user()
-        elif option == '2':
-            login_user()
-        elif option =='3':
-            read_db()
-        elif option =='4':
-            print('Hasta la proxima')
-            break
-        else:
-            print('Opcion incorrecta')
-
-main()
